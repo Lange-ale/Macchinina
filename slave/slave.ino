@@ -1,15 +1,13 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-//FARE LE FUNZIONI PER SPEGNERE FRECCIE e per far star la macchina ferma
-
-int DxAvantiMotor = 1;
-int DxIndietroMotor = 2;
-int SxAvantiMotor = 3;
-int SxIndietroMotor = 4;
-int frecciaDx = 5;
-int frecciaSx = 6;
-int fari = 7;
+int DxAvantiMotor = 2;
+int DxIndietroMotor = 3;
+int SxAvantiMotor = 4;
+int SxIndietroMotor = 5;
+int frecciaDx = 6;
+int frecciaSx = 7;
+int fari = 1;
 
 void avanti()
 {
@@ -39,6 +37,12 @@ void sinistra()
   digitalWrite(SxAvantiMotor, HIGH);
   digitalWrite(SxIndietroMotor, LOW);
 }
+void fermo(){
+  digitalWrite(DxAvantiMotor, LOW);
+  digitalWrite(DxIndietroMotor, LOW);
+  digitalWrite(SxAvantiMotor, LOW);
+  digitalWrite(SxIndietroMotor, LOW);
+}
 
 void accendiDx()
 {
@@ -47,6 +51,15 @@ void accendiDx()
 void accendiSx()
 {
   digitalWrite(frecciaSx, HIGH);
+}
+
+void spegniDx()
+{
+  digitalWrite(frecciaDx, LOW);
+}
+void spegniSx()
+{
+  digitalWrite(frecciaSx, LOW);
 }
 
 void accendiFari()
@@ -68,6 +81,9 @@ void riceviDati() {
   else if(comando == 'x') accendiSx();
   else if(comando == 'f') accendiFari();
   else if(comando == 'g') spegniFari();
+  else if(comando == 'x') spegniDx();
+  else if(comando == 'y') spegniSx();
+  else if(comando == 'z') fermo();
 }
 
 void setup() {
