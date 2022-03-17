@@ -73,14 +73,14 @@ void spegniFari()
 
 void riceviDati() {
   char comando = Wire.read();
-  if(comando == 'w') avanti();
-  else if(comando == 'a') sinistra();
-  else if(comando =='s') indietro();
+  if(comando == 'a') avanti();
+  else if(comando =='b') indietro();
   else if(comando == 'd') destra();
-  else if(comando == 'z') accendiDx();
-  else if(comando == 'x') accendiSx();
+  else if(comando == 'c') sinistra();
   else if(comando == 'f') accendiFari();
   else if(comando == 'g') spegniFari();
+  else if(comando == 'h') accendiDx();
+  else if(comando == 'i') accendiSx();
   else if(comando == 'x') spegniDx();
   else if(comando == 'y') spegniSx();
   else if(comando == 'z') fermo();
