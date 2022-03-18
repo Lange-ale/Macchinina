@@ -5,9 +5,9 @@ int DxAvantiMotor = 2;
 int DxIndietroMotor = 3;
 int SxAvantiMotor = 4;
 int SxIndietroMotor = 5;
-int frecciaDx = 6;
-int frecciaSx = 7;
-int fari = 1;
+int fari = 6;
+int frecciaDx = 7;
+int frecciaSx = 8;
 
 void avanti()
 {
@@ -73,17 +73,17 @@ void spegniFari()
 
 void riceviDati() {
   char comando = Wire.read();
-  if(comando == 'a') avanti();
-  else if(comando =='b') indietro();
+  if(comando == 'w') avanti();
+  else if(comando == 'a') sinistra();
+  else if(comando =='s') indietro();
   else if(comando == 'd') destra();
-  else if(comando == 'c') sinistra();
+  else if(comando == 'z') accendiDx();
+  else if(comando == 'x') accendiSx();
   else if(comando == 'f') accendiFari();
   else if(comando == 'g') spegniFari();
-  else if(comando == 'h') accendiDx();
-  else if(comando == 'i') accendiSx();
-  else if(comando == 'x') spegniDx();
-  else if(comando == 'y') spegniSx();
-  else if(comando == 'z') fermo();
+  else if(comando == 'b') spegniDx();
+  else if(comando == 'n') spegniSx();
+  else if(comando == 'm') fermo();
 }
 
 void setup() {

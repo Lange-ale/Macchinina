@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="macchinina.progetto.controllermacchinina.MacchininaController">
+   <children>
+      <VBox prefHeight="387.0" prefWidth="150.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onsinistraButtonClick" prefHeight="85.0" prefWidth="110.0" text="←">
+               <VBox.margin>
+                  <Insets left="32.0" top="148.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Bold" size="45.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="126.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onavantiButtonClick" prefHeight="90.0" prefWidth="110.0" text="↑">
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" top="46.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Bold" size="50.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onstopButtonClick" prefHeight="90.0" prefWidth="142.0" text="STOP">
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onindietroButtonClick" prefHeight="90.0" prefWidth="110.0" text="↓">
+               <VBox.margin>
+                  <Insets left="8.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Bold" size="50.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="126.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#ondestraButtonClick" prefHeight="85.0" prefWidth="110.0" text="→">
+               <VBox.margin>
+                  <Insets left="8.0" top="148.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman Bold" size="45.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="387.0" prefWidth="278.0">
+         <children>
+            <HBox prefHeight="195.0" prefWidth="254.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onfrecciaSinistraButtonClick" prefHeight="80.0" prefWidth="90.0" text="←">
+                     <font>
+                        <Font name="Times New Roman Bold" size="35.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" top="110.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onfrecciaDestraButtonClick" prefHeight="80.0" prefWidth="90.0" text="→">
+                     <font>
+                        <Font name="Times New Roman Bold" size="35.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="110.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#onfanaliButtonClick" prefHeight="80.0" prefWidth="90.0" text="💡">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="110.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>
