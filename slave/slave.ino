@@ -73,36 +73,36 @@ void spegniFari()
 
 void riceviDati() {
   char comando = Wire.read();
-  if(comando == 'w') avanti();
-  else if(comando == 'a') sinistra();
-  else if(comando =='s') indietro();
-  else if(comando == 'd') destra();
-  else if(comando == 'z') accendiDx();
-  else if(comando == 'x') accendiSx();
-  else if(comando == 'f') accendiFari();
-  else if(comando == 'g') spegniFari();
-  else if(comando == 'b') spegniDx();
-  else if(comando == 'n') spegniSx();
-  else if(comando == 'm') fermo();
+  switch (comando){
+    case 'w': avanti(); break;
+    case 'a': sinistra(); break;
+    case 's': indietro(); break;
+    case 'd': destra(); break;
+    case 'z': accendiDx(); break;
+    case 'x': accendiSx(); break;
+    case 'f': accendiFari(); break;
+    case 'g': spegniFari(); break;
+    case 'b': spegniDx(); break;
+    case 'n': spegniSx(); break;
+    case 'm': fermo(); break;
+  }
+}
+
+void initOutputPin(int pin){
+  pinMode(pin, OUTPUT);
+  digitalWrite(pin, LOW);
 }
 
 void setup() {
   Wire.begin(7);
   Wire.onReceive(riceviDati);
-  pinMode(DxAvantiMotor, OUTPUT);
-  pinMode(DxIndietroMotor, OUTPUT);
-  pinMode(SxAvantiMotor, OUTPUT);
-  pinMode(SxIndietroMotor, OUTPUT);
-  pinMode(frecciaDx, OUTPUT);
-  pinMode(frecciaSx, OUTPUT);
-  pinMode(fari, OUTPUT);
-  digitalWrite(DxAvantiMotor, LOW);
-  digitalWrite(DxIndietroMotor, LOW);
-  digitalWrite(SxAvantiMotor, LOW);
-  digitalWrite(SxIndietroMotor, LOW);
-  digitalWrite(frecciaDx, LOW);
-  digitalWrite(frecciaSx, LOW);
-  digitalWrite(fari, LOW);
+  initOutputPin(DxAvantiMotor);
+  initOutputPin(DxIndietroMotor);
+  initOutputPin(SxAvantiMotor);
+  initOutputPin(SxIndietroMotor);
+  initOutputPin(frecciaDx);
+  initOutputPin(frecciaSx);
+  initOutputPin(fari);
 }
 
 void loop() {}
