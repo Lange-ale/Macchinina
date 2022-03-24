@@ -14,24 +14,24 @@ void setup() {
   Wire.begin();
   Serial.begin(9600);
 }
-
+ int n;
+ long machineTime;
 void loop() {
   Serial.write(distance(s1));
   Serial.write(distance(s2));
   Serial.write(distance(s3));
   Serial.write(distance(s4));
-  int t = millis();
-  while(millis()-t<=500)
-    trasmetti('w');
-  t = millis();
-  while(millis()-t<=500)
-    trasmetti('a');
-  t = millis();
-  while(millis()-t<=500)
-    trasmetti('s');
-  t = millis();
-  while(millis()-t<=500)
-    trasmetti('d');
+  machineTime = millis();
+    if(machineTime== 2000){
+        machineTime = 0; 
+        n+=1;
+        if(n == 3){
+          n= 0;
+        }
+    }
+    if(distance(s1) == 5  || distance(s2) == 5 || distance(s3) == 5 || distance(s4) == 5){
+        trasmetti('m');
+     }
 }
 
 void trasmetti(char message){
