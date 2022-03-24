@@ -5,7 +5,10 @@ struct DistanceSensor{
   DistanceSensor (int trig, int echo) : trig(trig), echo(echo) {}
 };
 
-//DistanceSensor s1( ?, ? );
+DistanceSensor s1( 0, 1 );
+DistanceSensor s2(13, 12);
+DistanceSensor s3( 10 , 9 );
+DistanceSensor s4( 3, 4 );
 
 void setup() {
   Wire.begin();
@@ -13,15 +16,22 @@ void setup() {
 }
 
 void loop() {
- // Serial.write(distance(s1));
+  Serial.write(distance(s1));
+  Serial.write(distance(s2));
+  Serial.write(distance(s3));
+  Serial.write(distance(s4));
+  int t = millis();
+  while(millis()-t<=500)
     trasmetti('w');
-    delay(2000);
+  t = millis();
+  while(millis()-t<=500)
     trasmetti('a');
-    delay(2000);
+  t = millis();
+  while(millis()-t<=500)
     trasmetti('s');
-    delay(2000);
+  t = millis();
+  while(millis()-t<=500)
     trasmetti('d');
-    delay(2000);
 }
 
 void trasmetti(char message){
