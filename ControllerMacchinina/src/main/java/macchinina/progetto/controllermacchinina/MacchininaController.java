@@ -9,50 +9,55 @@ public class MacchininaController {
     @FXML
     private Button stopButton, avantiButton, indietroButton, sinistraButton, destraButton, frecciaSinistraButton, frecciaDestraButton, fanaliButton;
 
-    public void trasmetti(char c){
+    @FXML
+    private void initialize(){
+
+    }
+
+    private void trasmetti(char c){
         System.out.println(c);
     }
 
     @FXML
-    protected void onavantiButtonClick() {
+    private void onavantiButtonClick() {
         trasmetti('w');
     }
 
     @FXML
-    protected void onindietroButtonClick() {
+    private void onindietroButtonClick() {
         trasmetti('s');
     }
 
     @FXML
-    protected void onsinistraButtonClick() {
+    private void onsinistraButtonClick() {
         trasmetti('a');
     }
 
     @FXML
-    protected void ondestraButtonClick() {
+    private void ondestraButtonClick() {
         trasmetti('d');
     }
 
     @FXML
-    protected void onfrecciaSinistraButtonClick() {
+    private void onfrecciaSinistraButtonClick() {
         trasmetti('x');
         trasmetti('y');
     }
 
     @FXML
-    protected void onfrecciaDestraButtonClick() {
+    private void onfrecciaDestraButtonClick() {
         trasmetti('z');
         trasmetti('x');
     }
 
     @FXML
-    protected void onfanaliButtonClick() {
+    private void onfanaliButtonClick() {
         trasmetti('f');
         trasmetti('g');
     }
 
     @FXML
-    protected void onstopButtonClick() {
+    private void onstopButtonClick() {
         trasmetti('z');
     }
 }

@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="75090b5d-15a4-46cd-b4ce-e6558539d915" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../slave/slave.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../slave/slave.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/macchinina/progetto/controllermacchinina/MacchininaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/macchinina/progetto/controllermacchinina/MacchininaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/macchinina/progetto/controllermacchinina/MacchininaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/macchinina/progetto/controllermacchinina/MacchininaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +74,7 @@
       <workItem from="1647627358675" duration="364000" />
       <workItem from="1647634751239" duration="1196000" />
       <workItem from="1647818809099" duration="161000" />
+      <workItem from="1647855258767" duration="1962000" />
     </task>
     <servers />
   </component>
